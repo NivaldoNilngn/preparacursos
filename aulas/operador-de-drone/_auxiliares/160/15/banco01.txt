@@ -1,0 +1,88 @@
+package com.example.usurio.listview;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Banco01 extends SQLiteOpenHelper {
+
+    public static final int VERSAO_BANCO=1;
+    public static final String NOME_BANCO="db_produto";
+    public static final String TABELA_PRODUTOS="tb_produtos";
+    public static final String COLUNA_CODIGO="codigo";
+    public static final String COLUNA_NOME="cor";
+
+    public Banco01(Context context) {
+        super(context, NOME_BANCO, null, VERSAO_BANCO);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String QUERY_COLUNA=" CREATE TABLE "+TABELA_PRODUTOS+" ("
+                +COLUNA_CODIGO+ " INTEGER PRIMARY KEY,"
+                +COLUNA_NOME+ " TEXT) ";
+        db.execSQL(QUERY_COLUNA);
+    }
+
+    void addProduto(Produtos produtos){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put(COLUNA_NOME, produtos.getCor());
+        db.insert(TABELA_PRODUTOS, null, values);
+        db.close();
+
+    }
+
+    Produtos selecionaProduto(int codigo){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.query(TABELA_PRODUTOS, new String[]{
+                        COLUNA_CODIGO, COLUNA_NOME},
+                COLUNA_CODIGO+"=?", new String[] {String.valueOf(codigo)},
+                null, null, null, null);
+
+        if(cursor!=null){
+            cursor.moveToFirst();
+        }
+        Produtos grade=new Produtos(Integer.parseInt(cursor.getString(0)),
+                cursor.getString(1));
+        return grade;
+
+    }
+
+    void atualizaProduto(Produtos produto){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put(COLUNA_NOME, produto.getCor());
+        db.update(TABELA_PRODUTOS, values, COLUNA_CODIGO+"=?",
+                new String[]{String.valueOf(produto.getCodigo())});
+
+    }
+
+    public List<Produtos> listaTodosProdutos(){
+        List<Produtos> listaPro = new ArrayList<Produtos>();
+        String query = "SELECT * FROM " + TABELA_PRODUTOS;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c = db.rawQuery(query, null);
+        if(c.moveToFirst()){
+            do{
+                Produtos produto = new Produtos();
+                produto.setCodigo(Integer.parseInt(c.getString(0)));
+                produto.setCor(c.getString(1));
+                listaPro.add(produto);
+
+            }
+            while(c.moveToNext());
+        }
+        return listaPro;
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+}
