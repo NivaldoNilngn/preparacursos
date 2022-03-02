@@ -76,7 +76,7 @@
 
 												<li class="list__group-item ">
 													<a href="#" onclick="javascript:abrirJanela('_fixacao/160/1.pdf', 1360, 768);">
-													<i class="fas fa-graduation-cap mr-2"></i>EXERCICIOS FIXAÇÃO</a>
+													<i class="fas fa-graduation-cap mr-2"></i>EXERCICIOS fixaçâo</a>
 												</li>
 												
 												<li class="list__group-item ">
