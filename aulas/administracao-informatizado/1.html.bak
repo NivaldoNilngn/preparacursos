@@ -2494,12 +2494,12 @@
 												<a href="#page-24">24</a>
 												<a href="#page-25">25</a>
 											</div>
-											<div class="wc_ead_course_task_media_nav flex">
+											<!--<div class="wc_ead_course_task_media_nav flex">
 												<a class="class_next row-wrap js-next_lesson" href="#prova" title="PROVA">
 													<i class="fa fa-history mr-2" style="font-size: 2em;"></i>
 													<span class='ml-4 no_mobile'>PROVA</span>
 												</a>
-											</div>
+											</div>-->
 										</center>
    
 										<div id="main" class="dash_content_app_box">
