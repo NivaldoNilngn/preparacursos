@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Arquivo de verificação de propriedade do domínio para Microsoft 365 local na raiz do site",
+  "Domain": "nilngn.com.br",
+  "Id": "26f696b1-edff-43dc-9d7e-5f11a51ed07d"
+}
