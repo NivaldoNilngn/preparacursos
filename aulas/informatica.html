@@ -23,7 +23,7 @@
 	<!-- Page CSS plugins -->
 	<link rel="stylesheet" href="../assets/css/style1.css"/>
 	<link rel="stylesheet" href="../assets/css/main1.css" />
-
+	
 </head>
 <body>
     <nav>
@@ -36,7 +36,7 @@
     </li>
     <li></li>
     <li>
-      <a href="#" onclick="close_window();return false;">SAIR</a>
+      <a href="#" onclick="close_window();returnfalse;">SAIR</a>
     </li>
   </ul>
 </nav>
@@ -51,31 +51,47 @@
 				<div id="main">
 					<div class="inner">
 
-					<!-- Boxes -->
+						<!-- Boxes -->
 						<div class="thumbnails">
                            
 
 							<div class="box">
+								<a class="image fit"><img src="../images\informatica\introducao-informatica.png" alt="" /></a>
+									<h4>INTRODUÇÃO A INFORMATICA</h4>
+								<div class="inner">	
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+								</div>
+							</div>
+							
+							<div class="box">
 								<a class="image fit"><img src="../images\informatica\windows10.png" alt="" /></a>
 									<h4>CURSO WINDOWS 10</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-windows10" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 
 							<div class="box">
 								<a class="image fit"><img src="../images\informatica\word.png" alt="" /></a>
 								    <h4>MICROSOFT WORD</h4>
-                                <div class="inner">
-								    <a href="https://clicklo.net/curso-word2019" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
-								</div>
+									<div class="inner">	
+										<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									</div>
 							</div>
 
 							<div class="box">
 								<a class="image fit"><img src="../images\informatica\excel-basico.png" alt="" /></a>
 								    <h4>EXCEL ESSENCIAL 2019</h4>
 								<div class="inner">
-									<a href="http://clicklo.net/curso-excel2019" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+								</div>
+							</div>
+
+							<div class="box">
+								<a class="image fit"><img src="../images\informatica\excel-avancado.png" alt="" /></a>
+								    <h4>EXCEL AVANÇADO 2016</h4>
+								<div class="inner">
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 
@@ -83,7 +99,7 @@
 								<a class="image fit"><img src="../images\informatica\powerpoint.png" alt="" /></a>
 								    <h4>MICROSOFT POWERPOINT</h4>
                                 <div class="inner">
-								    <a href="http://clicklo.net/curso-powerpoint2019" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+								    <a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -91,7 +107,7 @@
 								<a class="image fit"><img src="../images\informatica\windows10-kids.png" alt="" /></a>
 									<h4>CURSO WINDOWS 10 KIDS</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-windows-10-kids" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 
@@ -99,7 +115,7 @@
 								<a class="image fit"><img src="../images\informatica\internet-kids.png" alt="" /></a>
 								    <h4>INTERNET KIDS</h4>
 								<div class="inner">
-									<a href="https://clicklo.net/curso-internet-kids" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit">Iniciar Cursos</a>
 								</div>
 							</div>
 
@@ -107,7 +123,7 @@
 								<a class="image fit"><img src="../images\informatica\youtube.png" alt="" /></a>
 								    <h4>YOUTUBE</h4>
 								<div class="inner">
-									<a href="https://clicklo.net/curso-youtube" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -115,16 +131,76 @@
 								<a class="image fit"><img src="../images\informatica\midias-sociais.png" alt="" /></a>
                                     <h4>MIDIAS SOCIAIS</h4>								
 								<div class="inner">
-									<a href="https://clicklo.net/curso-midias-sociais"class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal"class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 							    </div>
 							</div>
-
+						
 						</div>
 
 					</div>
 				</div>
 
+				
+				<div id="modal" class="janelaModal">
+					<div><a href="#fechar" title="Fechar" class="fechar">X</a>
+						<center><h2 style="color: #000;">DIGITE A SENHA</h2></center>
+						<center><form name=login><div align=center>
+						<center><table width=225 border=0 cellpadding=3>
+							<tr><td colspan=2><div align=center> 
+								<center><font face="Verdana, Arial, Helvetica, sans-serif" size=3>
+								
+								<h3 style="color: #000;  ">Área esclusiva para professor:</h3></font></center> 
+							</div></td></tr>
+						<tr align=center><td><font face="Verdana, Arial, Helvetica, sans-serif" size=3>
+								<B style="color: #000;" >Codigo:</B></font></td><td>
+						<font face="Verdana, Arial, Helvetica, sans-serif" size=3> 
+						<input type=password name=password size=20>
+						</font></td></tr>
+							<tr align=center><td colspan=2 align=center style="color: #000;" >
+								<input type=button value=Liberar id="submit" onClick=Login()></td></tr></table>
+						</center></div></form></center>
+					</div>
+				</div>
+
 				<!-- Scripts -->
+				<script LANGUAGE=JavaScript>
+					function Login(){
+						var done=0;
+						var password=document.login.password.value;
+							password=password.toLowerCase();
+					if (password=="0201123") {
+						window.location="introducao-informatica/1.html"; done=1;
+					}
+					if (password=="0202123") {
+						window.location="windows-10/1.html"; done=1;
+					}
+					if (password=="0203123") {
+						window.location="word-2019/1.html"; done=1;
+					}
+					if (password=="0204123") {
+						window.location="excel-2019/1.html"; done=1;
+					}
+					if (password=="0205123") {
+						window.location="excel-avancado/1.html"; done=1;
+					}
+					if (password=="0206123") {
+						window.location="powerpoint-2019/1.html"; done=1;
+					}
+					if (password=="0207123") {
+						window.location="windows-10-kids/1.html"; done=1;
+					}
+					if (password=="0208123") {
+						window.location="internet-kids/1.html"; done=1;
+					}
+					if (password=="0209123") {
+						window.location="youtube/1.html"; done=1;
+					}
+					if (password=="0210123") {
+						window.location="midias-sociais/1.html"; done=1;
+					}
+					if (done==0) { alert("Chame seu Educador"); }
+				}
+			</script>
 		<script>
 		 function close_window() {
 		  if (confirm("Olá Voce deseja Encerrar a Aula?")) {
@@ -132,12 +208,11 @@
 		  }
 		}
 		</script>
-					<script src="src="../assets//js/jquery.min.js"></script>
-					<script src="src="../assets//js/jquery.scrolly.min.js"></script>
-					<script src="src="../assets//js/jquery.poptrox.min.js"></script>
-					<script src="src="../assets//js/skel.min.js"></script>
-					<script src="src="../assets//js/util.js"></script>
-					<script src="src="../assets//js/main.js"></script>
+					<script src="../assets//js/jquery.min.js"></script>
+					<script src="../assets//js/jquery.scrolly.min.js"></script>
+					<script src="../assets//js/skel.min.js"></script>
+					<script src="../assets//js/util.js"></script>
+					<script src="../assets//js/main.js"></script>
 
 	</body>
 	</html>

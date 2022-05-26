@@ -58,15 +58,47 @@
 								<a class="image fit"><img src="../images\saude\atendente-de-farmacia.png" alt="" /></a>
 									<h4>ATENDENTE DE FARMACIA</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-atendente-de-farmacia" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 						</div>
 
 					</div>
 				</div>
+				
+				<div id="modal" class="janelaModal">
+					<div><a href="#fechar" title="Fechar" class="fechar">X</a>
+						<center><h2 style="color: #000;">DIGITE A SENHA</h2></center>
+						<center><form name=login><div align=center>
+						<center><table width=225 border=0 cellpadding=3>
+							<tr><td colspan=2><div align=center> 
+								<center><font face="Verdana, Arial, Helvetica, sans-serif" size=3>
+								
+								<h3 style="color: #000;  ">Área esclusiva para professor:</h3></font></center> 
+							</div></td></tr>
+						<tr align=center><td><font face="Verdana, Arial, Helvetica, sans-serif" size=3>
+								<B style="color: #000;" >Codigo:</B></font></td><td>
+						<font face="Verdana, Arial, Helvetica, sans-serif" size=3> 
+						<input type=password name=password size=20>
+						</font></td></tr>
+							<tr align=center><td colspan=2 align=center style="color: #000;" >
+								<input type=button value=Liberar id="submit" onClick=Login()></td></tr></table>
+						</center></div></form></center>
+					</div>
+				</div>
 
 				<!-- Scripts -->
+				<script LANGUAGE=JavaScript>
+					function Login(){
+						var done=0;
+						var password=document.login.password.value;
+							password=password.toLowerCase();
+					if (password=="0401123") {
+						window.location="atendente-de-farmacia/1.html"; done=1;
+					}
+					if (done==0) { alert("Chame seu Educador"); }
+				}
+			</script>
 		<script>
 		 function close_window() {
 		  if (confirm("Olá Voce deseja Encerrar a Aula?")) {
@@ -74,12 +106,11 @@
 		  }
 		}
 		</script>
-					<script src="src="../assets//js/jquery.min.js"></script>
-					<script src="src="../assets//js/jquery.scrolly.min.js"></script>
-					<script src="src="../assets//js/jquery.poptrox.min.js"></script>
-					<script src="src="../assets//js/skel.min.js"></script>
-					<script src="src="../assets//js/util.js"></script>
-					<script src="src="../assets//js/main.js"></script>
+					<script src="../assets//js/jquery.min.js"></script>
+					<script src="../assets//js/jquery.scrolly.min.js"></script>
+					<script src="../assets//js/skel.min.js"></script>
+					<script src="../assets//js/util.js"></script>
+					<script src="../assets//js/main.js"></script>
 
 	</body>
-	</html>
+	</html>>

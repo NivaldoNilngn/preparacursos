@@ -36,7 +36,7 @@
     </li>
     <li></li>
     <li>
-      <a href="#" onclick="close_window();return false;">SAIR</a>
+      <a href="#" onclick="close_window();returnfalse;">SAIR</a>
     </li>
   </ul>
 </nav>
@@ -59,7 +59,7 @@
 								<a class="image fit"><img src="../images\programacao\html-e-css.png" alt="" /></a>
 									<h4>HTML & CSS</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-html-css" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -67,7 +67,7 @@
 								<a class="image fit"><img src="../images\programacao\des-games-3d-1.png" alt="" /></a>
 									<h4>DES. GAMES 3D - 1</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-des-games-3d-1" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -75,7 +75,7 @@
 								<a class="image fit"><img src="../images\programacao\des-games-3d-2.png" alt="" /></a>
 									<h4>DES. GAMES 3D - 2</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-des-games-3d-2" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -83,7 +83,7 @@
 								<a class="image fit"><img src="../images\programacao\des-games-3d-3.png" alt="" /></a>
 									<h4>DES. GAMES 3D - 3</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-des-games-3d-3" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -91,7 +91,7 @@
 								<a class="image fit"><img src="../images\programacao\aplicativo-android.png" alt="" /></a>
 									<h4>DES. APP ANDROID</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-des-app-android" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -99,7 +99,7 @@
 								<a class="image fit"><img src="../images\programacao\operador-de-drone.png" alt="" /></a>
 									<h4>OPERADOR DE DRONE</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-operador-de-drone" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 							
@@ -107,7 +107,7 @@
 								<a class="image fit"><img src="../images\programacao\robotica.png" alt="" /></a>
 									<h4>ROBOTICA</h4>
 								<div class="inner">	
-									<a href="https://clicklo.net/curso-robotica" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
+									<a href="#modal" class="button fit" data-poptrox="youtube,800x400">Iniciar Cursos</a>
 								</div>
 							</div>
 						
@@ -116,7 +116,58 @@
 					</div>
 				</div>
 
+				
+				<div id="modal" class="janelaModal">
+					<div><a href="#fechar" title="Fechar" class="fechar">X</a>
+						<center><h2 style="color: #000;">DIGITE A SENHA</h2></center>
+						<center><form name=login><div align=center>
+						<center><table width=225 border=0 cellpadding=3>
+							<tr><td colspan=2><div align=center> 
+								<center><font face="Verdana, Arial, Helvetica, sans-serif" size=3>
+								
+								<h3 style="color: #000;  ">Área esclusiva para professor:</h3></font></center> 
+							</div></td></tr>
+						<tr align=center><td><font face="Verdana, Arial, Helvetica, sans-serif" size=3>
+								<B style="color: #000;" >Codigo:</B></font></td><td>
+						<font face="Verdana, Arial, Helvetica, sans-serif" size=3> 
+						<input type=password name=password size=20>
+						</font></td></tr>
+							<tr align=center><td colspan=2 align=center style="color: #000;" >
+								<input type=button value=Liberar id="submit" onClick=Login()></td></tr></table>
+						</center></div></form></center>
+					</div>
+				</div>
+
 				<!-- Scripts -->
+				<script LANGUAGE=JavaScript>
+					function Login(){
+						var done=0;
+						var password=document.login.password.value;
+							password=password.toLowerCase();
+					if (password=="0501123") {
+						window.location="html-e-css/1.html"; done=1;
+					}
+					if (password=="0502123") {
+						window.location="des-games-3d-1/1.html"; done=1;
+					}
+					if (password=="0503123") {
+						window.location="des-games-3d-2/1.html"; done=1;
+					}
+					if (password=="0504123") {
+						window.location="des-games-3d-3/1.html"; done=1;
+					}
+					if (password=="0505123") {
+						window.location="des-app-android/1.html"; done=1;
+					}
+					if (password=="0506123") {
+						window.location="operador-de-drone/1.html"; done=1;
+					}
+					if (password=="0507123") {
+						window.location="robotica/1.html"; done=1;
+					}
+					if (done==0) { alert("Chame seu Educador"); }
+				}
+			</script>
 		<script>
 		 function close_window() {
 		  if (confirm("Olá Voce deseja Encerrar a Aula?")) {
@@ -124,12 +175,11 @@
 		  }
 		}
 		</script>
-					<script src="src="../assets//js/jquery.min.js"></script>
-					<script src="src="../assets//js/jquery.scrolly.min.js"></script>
-					<script src="src="../assets//js/jquery.poptrox.min.js"></script>
-					<script src="src="../assets//js/skel.min.js"></script>
-					<script src="src="../assets//js/util.js"></script>
-					<script src="src="../assets//js/main.js"></script>
+					<script src="../assets//js/jquery.min.js"></script>
+					<script src="../assets//js/jquery.scrolly.min.js"></script>
+					<script src="../assets//js/skel.min.js"></script>
+					<script src="../assets//js/util.js"></script>
+					<script src="../assets//js/main.js"></script>
 
 	</body>
 	</html>
